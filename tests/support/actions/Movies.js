@@ -1,4 +1,5 @@
 import { expect } from "@playwright/test";
+import { type } from "node:os";
 
 export class Movies {
     constructor(page) {
@@ -14,7 +15,7 @@ export class Movies {
         await this.page.getByRole('button', { name: 'Cadastrar' }).click();
     }
 
-    async create(title, overview, company, release_year) {
+    async create(title, overview, company, release_year, cover) {
         await this.goForm();
 
         await this.page.getByLabel("Titulo do filme").fill(title);
@@ -33,6 +34,9 @@ export class Movies {
         await this.page.locator('.react-select__option')
             .filter({ hasText: release_year })
             .click();
+
+        await this.page.locator('input[name="cover"]')
+            .setInputFiles(`tests/support/fixtures/${cover}`);
 
         await this.submit();
     }
