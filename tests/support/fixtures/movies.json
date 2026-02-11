@@ -1,0 +1,90 @@
+{
+  "create": {
+    "title": "Star Wars: Episódio IV — Uma Nova Esperança",
+    "overview": "O jovem Luke Skywalker se junta à Princesa Leia, Han Solo e os rebeldes para derrotar o Império e destruir a Estrela da Morte.",
+    "company": "Fox Entertainment",
+    "release_year": 1977,
+    "featured": false,
+    "cover": "covers/star-wars-iv-uma-nova-esperanca.png"
+  },
+  "star_wars_v": {
+    "title": "Star Wars: Episódio V — O Império Contra-Ataca",
+    "overview": "A Aliança Rebelde sofre pesadas perdas; Luke busca treinamento com Yoda enquanto Han e Leia enfrentam perseguição e perigos do Império.",
+    "company": "Fox Entertainment",
+    "release_year": 1980,
+    "featured": false,
+    "cover": "covers/star-wars-v-o-imperio-contra-ataca.png"
+  },
+  "star_wars_vi": {
+    "title": "Star Wars: Episódio VI — O Retorno de Jedi",
+    "overview": "Os rebeldes planejam destruir a segunda Estrela da Morte enquanto Luke confronta Darth Vader e tenta redimir seu pai.",
+    "company": "Fox Entertainment",
+    "release_year": 1983,
+    "featured": false,
+    "cover": "covers/star-wars-vi-o-retorno-de-jedi.png"
+  },
+  "star_wars_i": {
+    "title": "Star Wars: Episódio I — A Ameaça Fantasma",
+    "overview": "Dois cavaleiros Jedi protegem a rainha Amidala e descobrem a ascensão do jovem Anakin Skywalker em meio a intrigas galácticas.",
+    "company": "Fox Entertainment",
+    "release_year": 1999,
+    "featured": false,
+    "cover": "covers/star-wars-i-a-ameaca-fantasma.png"
+  },
+  "star_wars_ii": {
+    "title": "Star Wars: Episódio II — Ataque dos Clones",
+    "overview": "Anakin começa a trilhar um caminho sombrio enquanto a República enfrenta uma guerra, e um exército de clones é revelado.",
+    "company": "Fox Entertainment",
+    "release_year": 2002,
+    "featured": false,
+    "cover": "covers/star-wars-ii-ataque-dos-clones.png"
+  },
+  "star_wars_iii": {
+    "title": "Star Wars: Episódio III — A Vingança dos Sith",
+    "overview": "A República cai e Anakin sucumbe ao lado negro, transformando-se em Darth Vader enquanto o Império se estabelece.",
+    "company": "Fox Entertainment",
+    "release_year": 2005,
+    "featured": false,
+    "cover": "covers/star-wars-iii-a-vinganca-dos-sith.png"
+  },
+  "star_wars_vii": {
+    "title": "Star Wars: Episódio VII — O Despertar da Força",
+    "overview": "Uma nova geração de heróis se une aos veteranos para enfrentar a Primeira Ordem e buscar pistas sobre o legado dos Jedi.",
+    "company": "Walt Disney Pictures",
+    "release_year": 2015,
+    "featured": false,
+    "cover": "covers/star-wars-vii-o-despertar-da-forca.png"
+  },
+  "star_wars_viii": {
+    "title": "Star Wars: Episódio VIII — Os Últimos Jedi",
+    "overview": "Enquanto a Resistência luta pela sobrevivência, Rey procura Luke Skywalker para treinamento e enfrenta dilemas sobre o futuro dos Jedi.",
+    "company": "Walt Disney Pictures",
+    "release_year": 2017,
+    "featured": false,
+    "cover": "covers/star-wars-viii-os-ultimos-jedi.png"
+  },
+  "star_wars_ix": {
+    "title": "Star Wars: Episódio IX — A Ascensão Skywalker",
+    "overview": "A conclusão da saga Skywalker traz confrontos decisivos entre a Resistência e a Nova Ordem, com revelações sobre o passado.",
+    "company": "Walt Disney Pictures",
+    "release_year": 2019,
+    "featured": false,
+    "cover": "covers/star-wars-ix-a-ascensao-skywalker.png"
+  },
+  "rogue_one": {
+    "title": "Rogue One: Uma História Star Wars",
+    "overview": "Um grupo de rebeldes se une para roubar os planos da Estrela da Morte, mudando o curso da guerra contra o Império.",
+    "company": "Lucasfilm / Walt Disney Pictures",
+    "release_year": 2016,
+    "featured": false,
+    "cover": "covers/rogue-one-uma-historia-star-wars.png"
+  },
+  "solo": {
+    "title": "Solo: Uma História Star Wars",
+    "overview": "A origem de Han Solo: aventuras, encontros e como ele conheceu Chewbacca e conquistou a Millenium Falcon.",
+    "company": "Lucasfilm / Walt Disney Pictures",
+    "release_year": 2018,
+    "featured": false,
+    "cover": "covers/solo-uma-historia-star-wars.png"
+  }
+}
