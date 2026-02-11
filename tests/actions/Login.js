@@ -1,7 +1,7 @@
 import { expect } from "@playwright/test";
 import { Toast } from "./Components";
 
-export class LoginPage {
+export class Login {
     constructor(page) {
         this.page = page;
     }
@@ -33,6 +33,14 @@ export class LoginPage {
         const alert = this.page.locator('.password-alert');
 
         await expect(alert).toHaveText(expectedText);
+    }
+
+    async isLoggedIn() {
+        const logoutLink = this.page.locator('a[href="/logout"]');
+
+        await this.page.waitForLoadState('networkidle');
+        await expect(this.page).toHaveURL(/.*admin/);
+        await expect(logoutLink).toBeVisible();
     }
 
 }

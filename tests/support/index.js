@@ -1,9 +1,9 @@
 const { test: base } = require('@playwright/test');
 
-import { LoginPage } from '../pages/LoginPage';
-import { Toast } from '../pages/Components';
-import { MoviesPage } from '../pages/MoviesPage';
-import { LandingPage } from '../pages/LandingPage';
+import { Login } from '../actions/Login';
+import { Toast } from '../actions/Components';
+import { Movies } from '../actions/Movies';
+import { Leads } from '../actions/Leads';
 
 
 const test = base.extend({
@@ -11,10 +11,10 @@ const test = base.extend({
 
         let context = page;
 
-        context['landingPage'] = new LandingPage(page);
-        context['loginPage'] = new LoginPage(page);
+        context['leads'] = new Leads(page);
+        context['login'] = new Login(page);
         context['toast'] = new Toast(page);
-        context['moviesPage'] = new MoviesPage(page);
+        context['movies'] = new Movies(page);
 
         await use(context);
     }

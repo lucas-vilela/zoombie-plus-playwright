@@ -1,21 +1,21 @@
 import { expect } from "@playwright/test";
 
-export class MoviesPage {
+export class Movies {
     constructor(page) {
         this.page = page;
     }
 
-    async isLoggedIn() {
-        const logoutLink = this.page.locator('a[href="/logout"]');
+    async goForm() {
+        const addButton = this.page.locator('a[href="/admin/movies/register"]');
+        await addButton.click();
+    }
 
-        await this.page.waitForLoadState('networkidle');
-        await expect(this.page).toHaveURL(/.*admin/);
-        await expect(logoutLink).toBeVisible();
+    async submit() {
+        await this.page.getByRole('button', { name: 'Cadastrar' }).click();
     }
 
     async create(title, overview, company, release_year) {
-        const addButton = this.page.locator('a[href="/admin/movies/register"]');
-        await addButton.click();
+        await this.goForm();
 
         await this.page.getByLabel("Titulo do filme").fill(title);
         await this.page.getByLabel("Sinopse").fill(overview);
@@ -34,8 +34,10 @@ export class MoviesPage {
             .filter({ hasText: release_year })
             .click();
 
-        await this.page.getByRole('button', { name: 'Cadastrar' }).click();
-        
+        await this.submit();
+    }
 
+    async assertAlertMessages(messages) {
+        await expect(this.page.locator('.alert')).toHaveText(messages);
     }
 }
