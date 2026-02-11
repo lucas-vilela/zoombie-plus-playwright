@@ -1,9 +1,9 @@
 const { test: base } = require('@playwright/test');
 
-import { Login } from '../actions/Login';
-import { Toast } from '../actions/Components';
-import { Movies } from '../actions/Movies';
-import { Leads } from '../actions/Leads';
+import { Login } from './actions/Login';
+import { Toast } from './actions/Components';
+import { Movies } from './actions/Movies';
+import { Leads } from './actions/Leads';
 
 
 const test = base.extend({

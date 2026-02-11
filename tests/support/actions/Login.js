@@ -6,6 +6,12 @@ export class Login {
         this.page = page;
     }
 
+    async do(email, password, userName) {
+        await this.visit();
+        await this.submit(email, password);
+        await this.isLoggedIn(userName);
+    }
+
     async visit() {
         await this.page.goto('http://localhost:3000/admin/login');
         const loginForm = this.page.locator('.login-form');
@@ -35,12 +41,10 @@ export class Login {
         await expect(alert).toHaveText(expectedText);
     }
 
-    async isLoggedIn() {
-        const logoutLink = this.page.locator('a[href="/logout"]');
+    async isLoggedIn(userName = 'Admin') {
+        const loggedUser = this.page.locator('.logged-user');
 
-        await this.page.waitForLoadState('networkidle');
-        await expect(this.page).toHaveURL(/.*admin/);
-        await expect(logoutLink).toBeVisible();
+        await expect(loggedUser).toHaveText(`Olá, ${userName}`);
     }
 
 }
