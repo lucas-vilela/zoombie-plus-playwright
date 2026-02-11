@@ -8,13 +8,15 @@ import { LandingPage } from '../pages/LandingPage';
 
 const test = base.extend({
     page: async ({ page }, use) => {
-        await use({
-            ...page,
-            loginPage: new LoginPage(page),
-            moviesPage: new MoviesPage(page),
-            landingPage: new LandingPage(page),
-            toast: new Toast(page)
-        });
+
+        let context = page;
+
+        context['landingPage'] = new LandingPage(page);
+        context['loginPage'] = new LoginPage(page);
+        context['toast'] = new Toast(page);
+        context['moviesPage'] = new MoviesPage(page);
+
+        await use(context);
     }
 });
 
